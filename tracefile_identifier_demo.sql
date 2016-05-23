@@ -1,4 +1,8 @@
 
+-- tracefile_identifier_demo.sql
+
+-- start a new session each time to get new trace file
+@@reconnect
 
 -- column variables to capture host, owner and tracefile name
 col tracehost new_value tracehost noprint
@@ -28,16 +32,17 @@ alter session set events '10046 trace name context forever, level 12';
 
 alter session set events '10046 trace name context off';
 
+-- Note: disconnect no longer necessary with 11g+
 -- disconnect to ensure all trace data flushed
 -- the disconnect must be done in the called script
 -- otherwise the values of the defined vars are lost
--- bug?
 
 -- now get the trace file, or other processing
 
 --@@scp '&&traceowner@&&tracehost:&&tracefile' '.'
---@@mrskew '&&traceowner@&&tracehost' '&&tracefile'
-@@tkprof '&&traceowner@&&tracehost' '&&tracefile'
+@@mrskew '&&traceowner@&&tracehost' '&&tracefile'
+@@plan '&&traceowner@&&tracehost' '&&tracefile'
+--@@tkprof '&&traceowner@&&tracehost' '&&tracefile'
 
 
 

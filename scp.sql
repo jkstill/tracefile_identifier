@@ -9,7 +9,7 @@ select '&&2' scp_target from dual;
 
 set feed on term on verify on
 
-disconnect
+--disconnect
 
 host scp &&scp_src &&scp_target
 
