@@ -2,5 +2,5 @@
 
 -- reconnect.sql
 
-connect jkstill/XXXX@oravm
+connect jkstill/XXXX@p1
 

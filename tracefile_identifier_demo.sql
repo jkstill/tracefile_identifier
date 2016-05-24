@@ -41,7 +41,7 @@ alter session set events '10046 trace name context off';
 
 --@@scp '&&traceowner@&&tracehost:&&tracefile' '.'
 @@mrskew '&&traceowner@&&tracehost' '&&tracefile'
-@@plan '&&traceowner@&&tracehost' '&&tracefile'
+--@@plan '&&traceowner@&&tracehost' '&&tracefile'
 --@@tkprof '&&traceowner@&&tracehost' '&&tracefile'
 
 
