@@ -39,10 +39,10 @@ alter session set events '10046 trace name context off';
 
 -- now get the trace file, or other processing
 
---@@scp '&&traceowner@&&tracehost:&&tracefile' '.'
-@@mrskew '&&traceowner@&&tracehost' '&&tracefile'
---@@plan '&&traceowner@&&tracehost' '&&tracefile'
---@@tkprof '&&traceowner@&&tracehost' '&&tracefile'
+@@scp '&&traceowner@&&tracehost:&&tracefile' '.'
+--@@mrskew '&&traceowner@&&tracehost' '&&tracefile'
+@@plan '&&traceowner@&&tracehost' '&&tracefile'
+@@tkprof '&&traceowner@&&tracehost' '&&tracefile'
 
 
 
